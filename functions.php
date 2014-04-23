@@ -2,9 +2,10 @@
 
 
 
-/*Jquery*/
-
-wp_enqueue_script( 'jquery' );
+function olympos_enqueue_scripts() {
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'olympos_enqueue_scripts');
 
 
 /* Add menu support */
