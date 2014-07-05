@@ -4,16 +4,16 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php if(is_home()) bloginfo('name'); else wp_title(''); ?></title>
-        <?php wp_head(); ?>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><?php if(is_home()) bloginfo('name'); else wp_title(''); ?></title>
+    <?php wp_head(); ?>
 
 
-        <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
         
-        <style type="text/css" media="screen">
-		@import url( <?php bloginfo('stylesheet_url'); ?> );
+    <style type="text/css" media="screen">
+	   @import url( <?php bloginfo('stylesheet_url'); ?> );
 	</style>
 
 	<script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>

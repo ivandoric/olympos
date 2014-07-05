@@ -9,7 +9,18 @@ This theme has practicaly no stylings except for normalize.css.
 It's completely blank and perfect for people that want to start their projects
 from ground up.
 
-NEW:
+## Mediaqueries
+
+No more _mediaqueries partial, instead media queries are defined in _golobals.scss, and you can use them like this:
+
+    @include tablets{
+        //Write your queries here
+    }
+
+You can use this just below the selector you want to use mediaqueries on. This gives you better view of your code, and what is happening to what element on the page when media query is triggered.
+
+
+## NEW:
 
 Now also includes Guardfile, so you can use LiveReload with this 
 configuration. 
