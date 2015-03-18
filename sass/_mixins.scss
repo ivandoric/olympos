@@ -1,0 +1,46 @@
+/* =============================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+// Add these mixins in your normal scss flow.
+/* Eg.
+    .container{
+        width:1024px;
+        
+        @include tablets{
+            width:90%;
+        }
+    }
+*/ 
+
+@mixin lrm{
+        @media screen and (max-width: 1350px){ @content;}
+}
+
+@mixin tablets{
+        @media screen and (max-width: 1000px){ @content; }
+}
+
+@mixin phones{
+        @media screen and (max-width: 720px){ @content; }
+}
+
+/* =============================================================================
+   Unit transform
+   ========================================================================== */
+
+// Used for making containers have width in percentages. 
+// Usage define elemnt width in px and the width of parent elemnt in px. 
+// eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}   
+
+@function cp($target, $container) {
+    @return ($target / $container) * 100%;
+}
+
+//Calculate rems - eg. font-size: rem(14px);
+
+@function rem($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0rem;
+}
+$base-font-size:16px;

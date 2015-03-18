@@ -1,7 +1,5 @@
 <?php
 
-
-
 function olympos_enqueue_scripts() {
     wp_enqueue_script('jquery');
 }

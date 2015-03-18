@@ -2,10 +2,10 @@
 /*!
 Theme Name: Olympos2
 Description: Blank Wordpress Theme
-Version: 1.0
+Version: 2.0
 Author: Ivan Dorić
 Author URI: http://www.watch-learn.com/
-Tags: starter theme, light, jQuery, flexslider, compass, sass, boilerplate
+Tags: starter theme, light, jQuery, flexslider, compass, sass, gulp, livereload
 
         The CSS, XHTML is released under GPL:
         http://www.opensource.org/licenses/gpl-license.php
@@ -17,11 +17,18 @@ Tags: starter theme, light, jQuery, flexslider, compass, sass, boilerplate
    ========================================================================== */
 @import "compass";
 
-
-@import "normalize";
-@import "flexslider";
+/* Setup */
+@import "reset";
+@import "mixins";
+@import "variables";
 @import "fonts";
 @import "globals";
+
+
+/* Vendor */
+@import "flexslider";
+
+/* WP parts */
 @import "header";
 @import "homepage";
 @import "sidebar";
