@@ -50,3 +50,8 @@ for compiling SASS/Compass files. It's much faster.
 
 Contact me here if you have any questions.
 
+###Uglify.js
+
+All .js files are now in lib folder. You can work on them normaly and on save Gulp.js will automaticaly minify and concatine them, and save them in
+olympos.min.js file. This file is called in footer.php
+

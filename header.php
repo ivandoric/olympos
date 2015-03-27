@@ -15,9 +15,6 @@
     <style type="text/css" media="screen">
 	   @import url( <?php bloginfo('stylesheet_url'); ?> );
 	</style>
-
-	<script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.flexslider-min.js"></script>
 </head>
 <body <?php body_class(); ?>>
         
