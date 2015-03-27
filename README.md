@@ -29,7 +29,7 @@ Instructions how to setup LiveReload can be found here: http://blog.amazeelabs.c
 
 ####Livereload
 
-Olympos now comes with Gulp.js. Gulp.js now only has instructions for LiveReload. Start it up with:
+Olympos now comes with Gulp.js. Gulp.js now only has instructions for LiveReload and uglify.js. Start it up with:
 
 ```shell
 gulp watch
