@@ -39,6 +39,10 @@ Most of the features are in gulp. This theme has almost no styling. You only hav
 
 All of these features are run when starting `gulp watch` except for image optimization, you have to run that task separatley.
 
+### Modernizr
+
+[Modernizr](https://modernizr.com/) is included in already compiled `olympos.min.js` file. If you want to change build of the Modernizr just replace `lib/modernizer.min.js` with your own and run **uglify** task. 
+
 ## Notes
 
 I've removed Compass from this version because I didn't see any real necessity for it. Also it slowed down css compilation process significantly. 
