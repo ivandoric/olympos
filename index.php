@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
-	<p>Hello world! This is Olympos theme with SASS/Compass support.</p>
+	<h1>Welcome to Olympos theme.</h1>
+    <p>
+        You can delete this text in index.php
+    </p>
 
+    
 <?php get_footer(); ?>

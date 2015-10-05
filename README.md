@@ -1,57 +1,62 @@
 This is just empty theme for starting your Wordpress projects, with
-built in support for **SASS/Compass** and **Gulp.js**.
+built in support for **Sass**, **Susy** and **Gulp.js**.
 
-It includes reset partial, flexslider partial.
-Also modernizr.js, flexslider.js and empty main.js for writing custom jQuery.
+## Requirements:
 
-This theme has practicaly no stylings. 
-It's completely blank and perfect for people that want to start their projects
-from ground up.
+1. [Node.js](https://nodejs.org/)
+2. [Gulp.js](http://gulpjs.com/)
 
-## Mediaqueries
+## Installation
 
-No more _mediaqueries partial, instead media queries are defined in _mixins.scss, and you can use them like this:
+Put `olympos` folder into your themes directory. 
 
-    @include tablets{
-        //Write your queries here
-    }
+Copy `package.json`and `gulpfile.js`into WordPress root. 
 
-You can use this just below the selector you want to use mediaqueries on or even in the selector itself. This gives you better view of your code, and what is happening to what element on the page when media query is triggered.
-
-
-## NEW:
-
-~~Now also includes Guardfile, so you can use LiveReload with this 
-configuration.
-Instructions how to setup LiveReload can be found here: http://blog.amazeelabs.com/en/comment/654303~~
-
-### Gulp.js
-
-####Livereload
-
-Olympos now comes with Gulp.js. Gulp.js now only has instructions for LiveReload and uglify.js. Start it up with:
+Run
 
 ```shell
-gulp watch
+npm install
 ```
-After starting gulp watch in your browse turn on LiveReload. [You can install it from here if you don't have it (Chrome)](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?utm_source=chrome-ntp-icon).
 
-**Note:** Of course you have to have installed [node.js](https://nodejs.org/) and [gulp.js](http://gulpjs.com/) for this to work - modules for LiveReload are included.
+to install all gulp plugins.
 
-###Compass
+If you don't want have `package.json` and `gulpfile.js` in root directory you can leave them in the theme, and run `npm install` in themes directory. But in that case be sure to change the paths in `gulpfile.js`. You will mostly have to delete `/wp-content/themes/olympos/` from the paths.
 
-Since gulp-compass is very slow I didn't include it in gulp.js. So you should use:
-```shell
-compass watch
-``` 
-for compiling SASS/Compass files. It's much faster.
+When you are done just run `glup watch`
 
-**Note:** You need to have [Compass](http://compass-style.org/) installed to use this feature.
+## Features
 
-Contact me here if you have any questions.
+Most of the features are in gulp. This theme has almost no styling. You only have `clearfix` defined and `_reset.scss` from Eric Mayer as a partial and some empty scss partials.
 
-###Uglify.js
+### Gulp features
 
-All .js files are now in lib folder. You can work on them normaly and on save Gulp.js will automaticaly minify and concatine them, and save them in
-olympos.min.js file. This file is called in footer.php
+* Image optimization
+* Sass compilation
+* Auto prefixing
+* Source maps for css file
+* Uglifying and concatinating all js files
+* LiveRelaod
 
+All of these features are run when starting `gulp watch` except for image optimization, you have to run that task separatley.
+
+## Notes
+
+I've removed Compass from this version because I didn't see any real necessity for it. Also it slowed down css compilation process significantly. 
+
+I've added [Susy](http://susy.oddbird.net/) for making custom grids and to help with css layout. If you don't want to use it just remove `susy` folder from `sass` folder and remove `@import "susy";` and `@import "su";` from the `style.scss` file in `sass` folder;
+
+### CSS and JavaScript
+
+All the of css can be found and should be written in partials. So that you end up with just one css file (style.css). 
+
+JavaScript has two folders `lib` and `js` you should never touch `js` folder, this is where the uglifyed and concatinated files go. Put your jQuery plugins and other JS files in lib folder and gulp will do the rest for you. There is no need to call those added scripts from header.php or footer.php, all your scripts will be concatinated in one file.
+
+### Some mixins and functions
+
+You have several mixins and functions in the `_mixins.scss` file along with comments on how to use them. These mixins and functions include:
+
+* Automatic calculation of percentages from pixels
+* Automatic calculations of rems from pixels 
+* Easy to use Media Queries in your normal css flow
+
+Open an issue for any problems that you encounter. 
