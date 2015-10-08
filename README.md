@@ -35,7 +35,7 @@ Most of the features are in gulp. This theme has almost no styling. You only hav
 * Auto prefixing
 * Source maps for css file
 * Uglifying and concatinating all js files
-* LiveRelaod
+* LiveReload
 
 All of these features are run when starting `gulp watch` except for image optimization, you have to run that task separatley.
 

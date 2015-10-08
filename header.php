@@ -11,10 +11,6 @@
 
 
     <meta name="viewport" content="width=device-width">
-        
-    <style type="text/css" media="screen">
-	   @import url( <?php bloginfo('stylesheet_url'); ?> );
-	</style>
 </head>
 <body <?php body_class(); ?>>
         
