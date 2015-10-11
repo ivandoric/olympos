@@ -1,6 +1,8 @@
 This is just empty theme for starting your Wordpress projects, with
 built in support for **Sass**, **Susy** and **Gulp.js**.
 
+[Check out the video on](https://www.youtube.com/watch?v=UtZ9LXoJ_YQ) installing and using this theme on YouTube.
+
 ## Requirements:
 
 1. [Node.js](https://nodejs.org/)
